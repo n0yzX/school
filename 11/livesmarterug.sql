@@ -21,3 +21,16 @@ CREATE TABLE auftrag (
     bezahlt BOOLEAN NOT NULL,
     FOREIGN KEY (kundennr) REFERENCES kunde (kundennr)
 );
+
+CREATE TABLE lieferant (
+    lieferantennr INT PRIMARY KEY AUTO_INCREMENT,
+    lieferantenname VARCHAR(30) NOT NULL,
+    telefon VARCHAR(30) NOT NULL,
+    webseite VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE artikellieferant (
+    artikelnr INT 
+    lieferantennr
+    preis DECIMAL NOT NULL;
+)
