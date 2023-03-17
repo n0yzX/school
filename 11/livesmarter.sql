@@ -71,3 +71,20 @@ CONSTRAINT pk_artikel PRIMARY KEY (artikelnummer,auftragsnummer),
 CONSTRAINT fk_auftragsposition_artikel FOREIGN KEY (artikelnummer) REFERENCES artikel (artikelnummer),
 CONSTRAINT fk_auftragsposition_auftragsnummer FOREIGN KEY (auftragsnummer) REFERENCES auftrag (auftragsnummer)
 );
+
+
+//manipulation
+INSERT INTO artikel (artikelnummer, artikelname, artikelart, herstellernummer, verkaufspreis)
+VALUES ('2','Homematic Funk-Statusdisplay mit Taster','Statusdisplay', '1', '80,00')
+
+INSERT INTO artikellieferant (artikelnummer, lieferantennummer, einkaufspreis)
+VALUES ('2','1','80,00')
+
+UPDATE artikel SET verkaufspreis = '145,00'
+WHERE artikelnummer = '1'
+
+Delete from artikel 
+Where artikelnummer = '1'
+
+//#1451 - Kann Eltern-Zeile nicht löschen oder aktualisieren: eine Fremdschlüsselbedingung schlägt fehl 
+//(`livesmarter`.`artikellieferant`, CONSTRAINT `fk_artikellieferant_artikel` FOREIGN KEY (`artikelnummer`) REFERENCES `artikel` (`artikelnummer`))
