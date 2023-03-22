@@ -88,3 +88,16 @@ Where artikelnummer = '1'
 
 //#1451 - Kann Eltern-Zeile nicht löschen oder aktualisieren: eine Fremdschlüsselbedingung schlägt fehl 
 //(`livesmarter`.`artikellieferant`, CONSTRAINT `fk_artikellieferant_artikel` FOREIGN KEY (`artikelnummer`) REFERENCES `artikel` (`artikelnummer`))
+
+
+// Übung DQL
+Select artikelname, artikelart From artikel
+
+Select lieferantenname From lieferant Order By lieferantenname DESC
+SELECT * FROM kunde WHERE ort = 'nuernberg'
+SELECT artikelname, artikelart From artikel WHERE verkaufspreis < 100.00
+SELECT artikelnummer, artikelname, artikelart FROM artikel WHERE artikelart = 'Sensor' ORDER BY verkaufspreis DESC;
+SELECT * FROM kunde WHERE plz like '90%' ORDER BY plz ASC;
+
+
+
