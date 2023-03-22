@@ -10,4 +10,4 @@ SELECT a.artikelnummer, a.artikelname ap.menge, au.kundennummer, au.auftragsnumm
 FROM auftrag au
 INNER JOIN auftragsposition ap ON au.auftragsnummer = ap.auftragsnummer
 INNER JOIN artikel a ON a.artikelnummer = ap.artikelnummer
-WHERE au.auftragsnummer = 201
+WHERE au.auftragsnummer = 201;
