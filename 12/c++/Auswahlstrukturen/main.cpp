@@ -54,6 +54,7 @@ int aufgabe2(){
 }
 
 
+
 int main()
 {
     aufgabe2();
